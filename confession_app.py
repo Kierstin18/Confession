@@ -1,8 +1,8 @@
 import streamlit as st
 
 # Confession letter generator as a Streamlit app
-def make_confession_letter(crush_name: str) -> str:
-    letter = f"""Hi {crush_name},
+def make_confession_letter(Madam: str) -> str:
+    letter = f"""Hi {Madam},
 
 I hope this letter doesn’t catch you by surprise, but I’ve been meaning to write this for quite some time. 
 There are things I want to tell you that I can’t always express in casual conversations, 
@@ -55,15 +55,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Confession Letter Generator 💌")
-st.write("Easily create and share a heartfelt confession letter!")
+st.title("Surprise!!")
+st.write("Heartfelt Confession Letter!")
 
 crush = st.text_input("Crush's name", "[Crush's Name]", help="Enter the name of your crush.")
 
 generate = st.button("Generate Letter")
 
 if generate:
-  letter = make_confession_letter(crush)
+  letter = make_confession_letter(Madam)
   st.text_area("", letter, height=400, label_visibility="collapsed")
   st.download_button("Download as .txt", letter, file_name=f"confession_to_{crush.replace(' ', '_')}.txt", use_container_width=True)
   st.info("Long-press to copy the letter or use the download button to save and share!")
+
