@@ -57,7 +57,7 @@ st.markdown("""
 st.title("Surprise!!")
 st.write("Heartfelt Confession Letter!")
 
-crush = st.text_input("Madam", "[Crush's Name]", help="Enter the name of your crush.")
+crush = st.text_input("Madam", "", help="Enter the name of your crush.")
 
 generate = st.button("Read")
 
