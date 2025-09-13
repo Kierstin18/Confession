@@ -45,9 +45,10 @@ Kier
 
 def main():
     print("Confession letter creator\n" + "-"*26)
-    crush = input("Enter your crush's name (or leave blank to use [Crush's Name]): ").strip()
-    if not crush:
-        crush = "[Crush's Name]"
+    crush = input("Enter your crush's name: ").strip()
+    while not crush:
+        print("Name cannot be blank. Please enter your crush's name.")
+        crush = input("Enter your crush's name: ").strip()
     # Only ask for crush's name
     letter = make_confession_letter(crush)
     print("\n" + "="*60 + "\n")
