@@ -63,9 +63,10 @@ crush = st.text_input("MAdam", "[Crush's Name]", help="Enter the name of your cr
 generate = st.button("Read")
 
 if generate:
-  letter = make_confession_letter(Madam)
+  letter = make_confession_letter(Crush)
   st.text_area("", letter, height=400, label_visibility="collapsed")
   st.download_button("Download as .txt", letter, file_name=f"confession_to_{crush.replace(' ', '_')}.txt", use_container_width=True)
   st.info("Long-press to copy the letter or use the download button to save and share!")
+
 
 
